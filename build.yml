@@ -1,0 +1,20 @@
+apiVersion: automation.cio/v1alpha1
+kind: RepositoryConfig
+ealImapNumber: EAL-008457
+build:
+  strategy: cirrus-deployment
+  pipeline: nodejs-v18-npm-container-image
+  version: v2
+  config:
+    cirrus-project-name: isc-ai-survey-chatbot
+    cirrus-pipeline-name: front-end
+    distribution-directory: .
+    cirrus-region: us-east1
+    service-port: "3000"
+    cirrus-api-username: "encrypted:v1:AAABjvZYWdJlCCduThliyH8C56Kv8l0n5zNu2c4hUo32Bnny67RVmG1m5BDbUqyxdIWfj6fdjPOJO2Q2RYWcARpOmeEcouhQmLcD9QwhDugE+zINTaiCa+2pC8nYx4WI2wHkf1o3zyPiumc+tZD+8C6YLvImYJ/ksvdJWeAsls1wAbgHxL9JubJnk2YGNQkHww=="
+    cirrus-api-password: "encrypted:v1:AAABjvZYWdKn34Lm+j1ogg24THvUpWwUFw488He9lt92Ycv0fOowwESd9s0NoZ7eUxhIRLV4q+nR9pzqfhl9duuB4q4uGs6Rymfj7L5CSheciYsaO4SfYiZ2MIVEmczwcMBy9Raw8AsE3CaINM9tQRBouMk7Iba3Bq/V24TS4XzCMXPI0VOihGK9mxWh868jrM551xbccdE1jIgYxu5kieAMGhEFLjB7zGiHrpvP6Q=="
+    deploy-verification-memory-request: q256mb
+release:
+  environments:
+    - name: production
+      deploy-verification-memory-request: "q1gb"

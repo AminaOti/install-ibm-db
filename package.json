@@ -1,0 +1,36 @@
+{
+  "name": "chat-bot-api",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "unit-test": "echo \"todo test\"",
+    "lint": "./node_modules/.bin/eslint --fix",
+    "e2e": "echo \"todo test\"",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "detect-secrets:update-baseline": "detect-secrets scan --update .secrets.baseline",
+    "detect-secrets:audit-baseline": "detect-secrets audit .secrets.baseline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "globals": "^15.0.0",
+    "nodemon": "^3.0.2"
+  }
+}
